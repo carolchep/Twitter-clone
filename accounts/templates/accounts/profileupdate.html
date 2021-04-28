@@ -1,0 +1,9 @@
+<form method='POST' enctype="multipart/form-data">
+    {%csrf_token%}
+    {{u_form}}
+    {{p_form}}
+    <button type='submit'>Update</button>
+</form>
+Note that request.FILES will only contain data if the request method was POST and the <form> that posted the request has the attribute enctype="multipart/form-data". Otherwise, request.POST will be empty.
+
+    enctype='multipart/form-data' is an encoding type that allows files to be sent through a POST.
